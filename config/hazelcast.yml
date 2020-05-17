@@ -18,6 +18,5 @@ hazelcast:
     bounded:
       max-size: 10
 
-  # probably need to comment for other examples
   cp-subsystem:
-    cp-member-count: 3
+      cp-member-count: 3
