@@ -1,0 +1,23 @@
+hazelcast:
+
+  group:
+    name: dev1
+    password: dev-pass
+
+  management-center:
+    enabled: true
+    scripting-enabled: false
+    update-interval: 2
+    url: http://192.168.56.1:8080/hazelcast-mancenter
+
+  map:
+    default:
+      backup-count: 2
+
+  queue:
+    bounded:
+      max-size: 10
+
+  # probably need to comment for other examples
+  cp-subsystem:
+    cp-member-count: 3
