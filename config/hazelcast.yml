@@ -7,12 +7,12 @@ hazelcast:
   management-center:
     enabled: true
     scripting-enabled: false
-    update-interval: 2
+    update-interval: 0
     url: http://localhost:8080/hazelcast-mancenter
 
   map:
-    default:
-      backup-count: 2
+    mmap:
+      backup-count: 0
 
   queue:
     bounded:

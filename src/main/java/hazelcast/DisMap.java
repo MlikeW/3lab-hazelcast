@@ -13,12 +13,9 @@ public class DisMap implements Common{
     }
 
     public void setData(String key, String content) {
-        hazelcastInstance.getMap("data")
+        hazelcastInstance.getMap("mmap")
                 .set(key, content);
     }
-//    public Map<String, String> getData() {
-//        return hazelcastInstance.getMap("data");
-//    }
 
     public static void main(String[] args) {
         var config = new ClientConfig();
