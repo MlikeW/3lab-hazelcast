@@ -19,7 +19,7 @@ public class Publisher implements Common {
 
         System.out.println(BREAK_LINE + "Starting...");
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             topic.publish(i);
             System.out.println("Published -  " + i);
             Thread.sleep(1000);

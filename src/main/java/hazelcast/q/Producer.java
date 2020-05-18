@@ -14,7 +14,7 @@ public class Producer implements Common {
                 .addAddress(LOCALHOST + PORT_1);
         HazelcastInstance hz = HazelcastClient.newHazelcastClient(config);
         IQueue<Integer> queue = hz.getQueue(QUEUE);
-        for ( int k = 1; k < 100; k++ ) {
+        for ( int k = 1; k < 40; k++ ) {
             queue.put( k );
             System.out.println( "Producing: " + k );
             Thread.sleep(500);

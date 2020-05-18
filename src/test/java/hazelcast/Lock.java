@@ -28,19 +28,19 @@ public class Lock implements Common {
                 .join();
     }
 
-    private static void processingWithLock(HazelcastInstance hazelcastInstance, String prefix) {
+    private static void processingWithLock(HazelcastInstance hazelcastInstance, String clientInfo) {
         var lock = hazelcastInstance.getLock(LOCK);
         while(true) {
             lock.lock();
             try {
-                System.out.println(prefix + "Lock working...");
+                System.out.println(clientInfo + "Lock working...");
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException ex) {
                     System.out.println("--InterruptedException--" + ex.getMessage());
                 }
             } finally {
-                System.out.println(prefix + "Work done.");
+                System.out.println(clientInfo + "Work done.");
                 lock.unlock();
             }
         }
